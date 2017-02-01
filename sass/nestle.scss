@@ -1,0 +1,489 @@
+/*! 
+
+Nestle Waters: Animated Hero Banner
+UID: Michael "Spell" Spellacy (michael.spellacy@tmp.com, @spellacy)
+
+*/
+
+// ****** Animated Hero Banner ******
+
+// Variables
+
+$hero-banner-large-width: 1374;
+$hero-banner-small-width: 842;
+$hero-banner-height: 643;
+$hero-banner-breakpoint-1: (480 / 16) + em;
+$hero-banner-breakpoint-2: (640 / 16) + em;
+$hero-banner-breakpoint-3: ($hero-banner-large-width / 16) + em;
+$hero-color-primary: #d7d7d7;
+$hero-color-secondary: #254591;
+$hero-color-tertiary: #00aeef;
+$hero-color-quaternary: #fff;
+
+// Global Stuff 
+
+@function percent($target, $context) {
+
+	$result: ($target / $context) * 100;
+	@return $result#{'%'};
+
+}
+
+// Animation Keys
+
+@keyframes fade-in {
+
+    0% {
+    opacity: 0;
+	}
+    
+    100% {
+    opacity: 1;
+	}
+
+}
+
+@keyframes fade-in-slide {
+
+    0% {
+    width: 50%;
+	}
+    
+    100% {
+    width: 0;
+	}
+
+}
+
+@keyframes fade-in-scale {
+
+    0% {
+    opacity: 0;
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    }
+
+    40% {
+    opacity: 1;
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    }
+
+    60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    }
+
+    80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    }
+
+    100% {
+    opacity: 1;
+    transform: perspective(400px);
+    }
+
+}
+
+#hero-banner {
+background-color: $hero-color-quaternary;
+box-sizing: border-box;
+font-family: "HELVETICA NEUE WEB FONT","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue", Helvetica, Arial,"Lucida Grande",sans-serif;
+line-height: 1.6;
+max-width: $hero-banner-large-width + px;
+position: relative;
+text-rendering: optimizeLegibility;
+-webkit-text-size-adjust: 100%;
+-webkit-font-smoothing: antialiased;
+-ms-text-size-adjust: 100%;
+
+	.cssanimations & {
+	animation: fade-in 0.8s ease-in forwards;
+
+		.hero-image, .hero-content, .hero-elements li   {
+		opacity: 0;
+		}
+
+		@media (min-width: $hero-banner-breakpoint-2) {
+
+			animation: none 0s ease none;
+
+		}
+
+	}
+
+	@media (min-width: $hero-banner-breakpoint-3) {
+
+		margin: 0 auto;
+		min-height: $hero-banner-height + px;
+
+	}
+
+	*,*:before, *:after {
+	box-sizing: inherit;
+	}
+
+	// Hero Grid
+
+	&:before {
+	background-image: url("../v2_0/hero-banner/grid-sm.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	content: "";
+	position: absolute;
+	z-index: 2;
+
+		@media (min-width: $hero-banner-breakpoint-2) {
+
+			background-image: url("../v2_0/hero-banner/grid-lg.png");
+
+		}
+
+	}
+
+	// Hero Image
+
+	.hero-image {
+	position: relative;
+	z-index: 1;
+
+		.cssanimations & {
+
+			animation: fade-in 800ms 1.2s ease-in forwards;
+
+		}
+
+	}
+
+	&:before, .hero-image  {
+	display: block;
+	height: 100%;
+	left: 0;
+	top: 0;
+	width: 100%;
+	}
+
+	// Hero Content
+
+	.hero-content {
+	background-color: $hero-color-quaternary;
+	float: left;
+	padding: 1em;
+	position: relative;
+	text-align: center;
+	width: 100%;
+	z-index: 5;
+
+		@media (min-width: $hero-banner-breakpoint-2) {
+
+			float: none;
+			font-size: 1.3vw;
+			height: 40%;
+			margin: percent(188, $hero-banner-large-width) percent(40, $hero-banner-large-width) 0 percent(878, $hero-banner-large-width);
+			padding: 0;
+			position: absolute;
+			text-align: left;
+			top: 0;
+			width: auto;
+
+		}
+
+		@media (min-width: $hero-banner-breakpoint-3) {
+
+			font-size: 1.1rem;
+
+		}
+
+		.cssanimations & {
+
+			animation: fade-in 600ms 1.5s ease-in forwards;
+
+		}
+
+		h2 {
+		color: $hero-color-secondary;
+		font-size: 1.2em;
+		line-height: normal;
+		margin: 0 0 0.5em;
+
+			@media (min-width: $hero-banner-breakpoint-2) {
+
+				font-size: 2.1vw;
+
+			}
+
+			@media (min-width: $hero-banner-breakpoint-3) {
+
+				font-size: 1.8rem;
+
+			}
+
+		}
+
+		p {
+		line-height: 1.8;
+		margin: 0;
+		padding: 0;
+		}
+
+	}
+
+	.hero-content-position {
+
+		@media (min-width: $hero-banner-breakpoint-2) {
+
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+
+		}
+
+	}
+
+	// Hero Elements
+
+	.hero-elements {
+	color: $hero-color-primary;
+	height: 100%;
+	left: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 4;
+
+		li {
+		background-color: $hero-color-primary;
+		display: block;
+		font-size: 2.2vw;
+		height: percent(176, $hero-banner-height);
+		line-height: normal;
+		margin: 0;
+		padding: percent(10, $hero-banner-small-width);
+		position: absolute;
+		text-align: center;
+		top: percent(6, $hero-banner-height);
+		width: percent(146, $hero-banner-small-width);
+		
+			@media (min-width: $hero-banner-breakpoint-2) {
+				
+				font-size: 1.3vw;
+				padding: percent(4, $hero-banner-large-width);
+				width: percent(146, $hero-banner-large-width);
+
+			}
+
+			@media (min-width: $hero-banner-breakpoint-3) {
+
+				font-size: 1.2rem;
+
+			}
+
+			.cssanimations & {
+
+				animation-duration: 0.9s;
+				animation-name: fade-in-scale;
+				animation-timing-function: ease-in;
+				animation-fill-mode: forwards;
+				backface-visibility: visible;
+
+			}
+
+			&:nth-child(1) {
+			left: percent(82, $hero-banner-small-width);
+
+				@media (min-width: $hero-banner-breakpoint-2) {
+
+					left: percent(158, $hero-banner-large-width);
+
+				}
+
+			}
+
+			&:nth-child(2) {
+			left: percent(234, $hero-banner-small-width);
+
+				@media (min-width: $hero-banner-breakpoint-2) {
+
+					left: percent(310, $hero-banner-large-width);
+
+				}
+
+				.cssanimations & {
+
+					animation-delay: 0.2s;
+
+				}
+
+			}
+
+			&:nth-child(3) {
+			left: percent(386, $hero-banner-small-width);
+
+				@media (min-width: $hero-banner-breakpoint-2) {
+
+					left: percent(462, $hero-banner-large-width);
+
+				}
+
+				.cssanimations & {
+
+					animation-delay: 0.4s;
+
+				}
+
+			}
+
+			&:nth-child(4) {
+			left: percent(538, $hero-banner-small-width);
+
+				@media (min-width: $hero-banner-breakpoint-2) {
+
+					left: percent(614, $hero-banner-large-width);
+
+				}
+
+				.cssanimations & {
+
+					animation-delay: 0.6s;
+
+				}
+
+			}
+
+			&:nth-child(5) {
+			left: percent(690, $hero-banner-small-width);
+
+				@media (min-width: $hero-banner-breakpoint-2) {
+
+					left: percent(766, $hero-banner-large-width);
+
+				}
+
+				.cssanimations & {
+
+					animation-delay: 0.8s;
+
+				}
+
+			}
+
+			strong {
+			background-color: $hero-color-quaternary;
+			display: block;
+			height: 100%;
+			}
+
+			em {
+			color: #999;
+			display: block;
+			font-style: normal;
+			font-weight: normal;
+			position: relative;
+			text-transform: lowercase;
+			top: 50%;
+			transform: translateY(-50%);
+
+				&:before {
+				color: $hero-color-primary;
+				content: attr(data-element);
+				display: block;
+				font-size: 9vw;
+				font-weight: bold;
+				text-transform: none;
+
+					@media (min-width: $hero-banner-breakpoint-2) {
+
+						font-size: 5.8vw;
+
+					}
+
+					@media (min-width: $hero-banner-breakpoint-3) {
+
+						font-size: 5.6rem;
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	// Hero Grid Slide
+
+	$hero-col-width: 152;
+	$hero-col-elements: 9;
+
+	.hero-grid {
+	display: none;
+	height: 100%;
+	position: absolute;
+	top: percent(6, $hero-banner-height);
+	width: percent($hero-col-width, $hero-banner-small-width);
+	z-index: 3;
+
+		@media (min-width: $hero-banner-breakpoint-2) {
+
+			display: block;
+			width: percent($hero-col-width, $hero-banner-large-width);
+
+		}
+
+		&.hero-col-1 {
+		left: 0;
+		}
+
+		// Column Loop
+
+		@for $i from 1 to $hero-col-elements {
+
+        	&.hero-col-#{$i + 1} {
+
+          	left: percent(($hero-col-width * $i), $hero-banner-small-width);
+
+				@media (min-width: $hero-banner-breakpoint-2) {
+
+					left: percent(($hero-col-width * $i), $hero-banner-large-width);
+
+				}
+
+        	}
+
+      	}
+
+		&:before, &:after {
+		background-color: $hero-color-quaternary;
+		content: "";
+		display: block;
+		height: 100%;
+		position:absolute;
+		top: 0;
+		width: 0;
+		
+			.cssanimations & {
+
+				width: 50.1%;
+
+				@media (min-width: $hero-banner-breakpoint-2) {
+
+					animation: fade-in-slide 600ms 1.4s ease-in forwards; // Only run animation on larger viewports
+
+				}
+
+			}
+
+		}
+
+		&:before {
+		left: 0;
+		}
+
+		&:after {
+		left: 50%;
+		}
+
+	}
+
+}

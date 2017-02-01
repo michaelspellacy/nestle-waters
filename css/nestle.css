@@ -1,0 +1,287 @@
+/*! 
+
+Nestle Waters: Animated Hero Banner
+UID: Michael "Spell" Spellacy (michael.spellacy@tmp.com, @spellacy)
+
+*/
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fade-in-slide {
+  0% {
+    width: 50%; }
+  100% {
+    width: 0; } }
+@keyframes fade-in-scale {
+  0% {
+    opacity: 0;
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg); }
+  40% {
+    opacity: 1;
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg); }
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg); }
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg); }
+  100% {
+    opacity: 1;
+    transform: perspective(400px); } }
+#hero-banner {
+  background-color: #fff;
+  box-sizing: border-box;
+  font-family: "HELVETICA NEUE WEB FONT","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue", Helvetica, Arial,"Lucida Grande",sans-serif;
+  line-height: 1.6;
+  max-width: 1374px;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%; }
+  .cssanimations #hero-banner {
+    animation: fade-in 0.8s ease-in forwards; }
+    .cssanimations #hero-banner .hero-image, .cssanimations #hero-banner .hero-content, .cssanimations #hero-banner .hero-elements li {
+      opacity: 0; }
+    @media (min-width: 40em) {
+      .cssanimations #hero-banner {
+        animation: none 0s ease none; } }
+  @media (min-width: 85.875em) {
+    #hero-banner {
+      margin: 0 auto;
+      min-height: 643px; } }
+  #hero-banner *, #hero-banner *:before, #hero-banner *:after {
+    box-sizing: inherit; }
+  #hero-banner:before {
+    background-image: url("../v2_0/hero-banner/grid-sm.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: "";
+    position: absolute;
+    z-index: 2; }
+    @media (min-width: 40em) {
+      #hero-banner:before {
+        background-image: url("../v2_0/hero-banner/grid-lg.png"); } }
+  #hero-banner .hero-image {
+    position: relative;
+    z-index: 1; }
+    .cssanimations #hero-banner .hero-image {
+      animation: fade-in 800ms 1.2s ease-in forwards; }
+  #hero-banner:before, #hero-banner .hero-image {
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%; }
+  #hero-banner .hero-content {
+    background-color: #fff;
+    float: left;
+    padding: 1em;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 5; }
+    @media (min-width: 40em) {
+      #hero-banner .hero-content {
+        float: none;
+        font-size: 1.3vw;
+        height: 40%;
+        margin: 13.68268% 2.91121% 0 63.90102%;
+        padding: 0;
+        position: absolute;
+        text-align: left;
+        top: 0;
+        width: auto; } }
+    @media (min-width: 85.875em) {
+      #hero-banner .hero-content {
+        font-size: 1.1rem; } }
+    .cssanimations #hero-banner .hero-content {
+      animation: fade-in 600ms 1.5s ease-in forwards; }
+    #hero-banner .hero-content h2 {
+      color: #254591;
+      font-size: 1.2em;
+      line-height: normal;
+      margin: 0 0 0.5em; }
+      @media (min-width: 40em) {
+        #hero-banner .hero-content h2 {
+          font-size: 2.1vw; } }
+      @media (min-width: 85.875em) {
+        #hero-banner .hero-content h2 {
+          font-size: 1.8rem; } }
+    #hero-banner .hero-content p {
+      line-height: 1.8;
+      margin: 0;
+      padding: 0; }
+  @media (min-width: 40em) {
+    #hero-banner .hero-content-position {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%); } }
+  #hero-banner .hero-elements {
+    color: #d7d7d7;
+    height: 100%;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 4; }
+    #hero-banner .hero-elements li {
+      background-color: #d7d7d7;
+      display: block;
+      font-size: 2.2vw;
+      height: 27.3717%;
+      line-height: normal;
+      margin: 0;
+      padding: 1.18765%;
+      position: absolute;
+      text-align: center;
+      top: 0.93313%;
+      width: 17.33967%; }
+      @media (min-width: 40em) {
+        #hero-banner .hero-elements li {
+          font-size: 1.3vw;
+          padding: 0.29112%;
+          width: 10.62591%; } }
+      @media (min-width: 85.875em) {
+        #hero-banner .hero-elements li {
+          font-size: 1.2rem; } }
+      .cssanimations #hero-banner .hero-elements li {
+        animation-duration: 0.9s;
+        animation-name: fade-in-scale;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+        backface-visibility: visible; }
+      #hero-banner .hero-elements li:nth-child(1) {
+        left: 9.73872%; }
+        @media (min-width: 40em) {
+          #hero-banner .hero-elements li:nth-child(1) {
+            left: 11.49927%; } }
+      #hero-banner .hero-elements li:nth-child(2) {
+        left: 27.79097%; }
+        @media (min-width: 40em) {
+          #hero-banner .hero-elements li:nth-child(2) {
+            left: 22.56186%; } }
+        .cssanimations #hero-banner .hero-elements li:nth-child(2) {
+          animation-delay: 0.2s; }
+      #hero-banner .hero-elements li:nth-child(3) {
+        left: 45.84323%; }
+        @media (min-width: 40em) {
+          #hero-banner .hero-elements li:nth-child(3) {
+            left: 33.62445%; } }
+        .cssanimations #hero-banner .hero-elements li:nth-child(3) {
+          animation-delay: 0.4s; }
+      #hero-banner .hero-elements li:nth-child(4) {
+        left: 63.89549%; }
+        @media (min-width: 40em) {
+          #hero-banner .hero-elements li:nth-child(4) {
+            left: 44.68705%; } }
+        .cssanimations #hero-banner .hero-elements li:nth-child(4) {
+          animation-delay: 0.6s; }
+      #hero-banner .hero-elements li:nth-child(5) {
+        left: 81.94774%; }
+        @media (min-width: 40em) {
+          #hero-banner .hero-elements li:nth-child(5) {
+            left: 55.74964%; } }
+        .cssanimations #hero-banner .hero-elements li:nth-child(5) {
+          animation-delay: 0.8s; }
+      #hero-banner .hero-elements li strong {
+        background-color: #fff;
+        display: block;
+        height: 100%; }
+      #hero-banner .hero-elements li em {
+        color: #999;
+        display: block;
+        font-style: normal;
+        font-weight: normal;
+        position: relative;
+        text-transform: lowercase;
+        top: 50%;
+        transform: translateY(-50%); }
+        #hero-banner .hero-elements li em:before {
+          color: #d7d7d7;
+          content: attr(data-element);
+          display: block;
+          font-size: 9vw;
+          font-weight: bold;
+          text-transform: none; }
+          @media (min-width: 40em) {
+            #hero-banner .hero-elements li em:before {
+              font-size: 5.8vw; } }
+          @media (min-width: 85.875em) {
+            #hero-banner .hero-elements li em:before {
+              font-size: 5.6rem; } }
+  #hero-banner .hero-grid {
+    display: none;
+    height: 100%;
+    position: absolute;
+    top: 0.93313%;
+    width: 18.05226%;
+    z-index: 3; }
+    @media (min-width: 40em) {
+      #hero-banner .hero-grid {
+        display: block;
+        width: 11.06259%; } }
+    #hero-banner .hero-grid.hero-col-1 {
+      left: 0; }
+    #hero-banner .hero-grid.hero-col-2 {
+      left: 18.05226%; }
+      @media (min-width: 40em) {
+        #hero-banner .hero-grid.hero-col-2 {
+          left: 11.06259%; } }
+    #hero-banner .hero-grid.hero-col-3 {
+      left: 36.10451%; }
+      @media (min-width: 40em) {
+        #hero-banner .hero-grid.hero-col-3 {
+          left: 22.12518%; } }
+    #hero-banner .hero-grid.hero-col-4 {
+      left: 54.15677%; }
+      @media (min-width: 40em) {
+        #hero-banner .hero-grid.hero-col-4 {
+          left: 33.18777%; } }
+    #hero-banner .hero-grid.hero-col-5 {
+      left: 72.20903%; }
+      @media (min-width: 40em) {
+        #hero-banner .hero-grid.hero-col-5 {
+          left: 44.25036%; } }
+    #hero-banner .hero-grid.hero-col-6 {
+      left: 90.26128%; }
+      @media (min-width: 40em) {
+        #hero-banner .hero-grid.hero-col-6 {
+          left: 55.31295%; } }
+    #hero-banner .hero-grid.hero-col-7 {
+      left: 108.31354%; }
+      @media (min-width: 40em) {
+        #hero-banner .hero-grid.hero-col-7 {
+          left: 66.37555%; } }
+    #hero-banner .hero-grid.hero-col-8 {
+      left: 126.3658%; }
+      @media (min-width: 40em) {
+        #hero-banner .hero-grid.hero-col-8 {
+          left: 77.43814%; } }
+    #hero-banner .hero-grid.hero-col-9 {
+      left: 144.41805%; }
+      @media (min-width: 40em) {
+        #hero-banner .hero-grid.hero-col-9 {
+          left: 88.50073%; } }
+    #hero-banner .hero-grid:before, #hero-banner .hero-grid:after {
+      background-color: #fff;
+      content: "";
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      width: 0; }
+      .cssanimations #hero-banner .hero-grid:before, .cssanimations #hero-banner .hero-grid:after {
+        width: 50.1%; }
+        @media (min-width: 40em) {
+          .cssanimations #hero-banner .hero-grid:before, .cssanimations #hero-banner .hero-grid:after {
+            animation: fade-in-slide 600ms 1.4s ease-in forwards; } }
+    #hero-banner .hero-grid:before {
+      left: 0; }
+    #hero-banner .hero-grid:after {
+      left: 50%; }
+
+/*# sourceMappingURL=nestle.css.map */

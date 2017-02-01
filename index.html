@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/nestle.css">
+	<link rel="stylesheet" href="css/tmp.css">
+	<script src="v2_0/js/modernizr-custom.js"></script>
+	<script src="v2_0/js/picturefill-3.0.2.js"></script>
+	<title>Nestlé Waters: Animated Hero Banner</title>
+</head>
+
+<body>
+
+	<h1>Nestlé Waters: Animated Hero Banner</h1>
+
+	<div id="hero-banner">
+
+		<picture>
+			<source srcset="v2_0/hero-banner/photo-2-lg.jpg" media="(min-width: 40em)">
+			<img src="v2_0/hero-banner/photo-2-sm.jpg" class="hero-image" alt="">
+		</picture>
+
+		<div class="hero-content">
+
+			<div class="hero-content-position">
+
+				<h2>We have the right elements to help you succeed.</h2>
+
+				<p>Join us and see how our great careers combine with your individual strengths to create an enviornment where you can succeed both at work and in life.</p>
+
+			</div>
+
+		</div>
+
+		<ul class="hero-elements">
+			<li><strong><em data-element="Su">Support</em></strong></li>
+			<li><strong><em data-element="C">Collaboration</em></strong></li>
+			<li><strong><em data-element="Ce">Commitment</em></strong></li>
+			<li><strong><em data-element="E">Effort</em></strong></li>
+			<li><strong><em data-element="D">Dedication</em></strong></li>
+		</ul>
+
+		<div class="hero-grid hero-col-1"></div>
+		<div class="hero-grid hero-col-2"></div>
+		<div class="hero-grid hero-col-3"></div>
+		<div class="hero-grid hero-col-4"></div>
+		<div class="hero-grid hero-col-5"></div>
+		<div class="hero-grid hero-col-6"></div>
+		<div class="hero-grid hero-col-7"></div>
+		<div class="hero-grid hero-col-8"></div>
+		<div class="hero-grid hero-col-9"></div>
+
+	</div>
+
+	<h2>Markup</h2>
+
+	<p>Semantic. Accessible. Maintainable. <em>Beautiful.</em></p>
+
+<pre><code>&lt;div id="hero-banner"&gt;
+
+	&lt;picture&gt;
+		&lt;source srcset="v2_0/hero-banner/photo-2-lg.jpg" media="(min-width: 40em)"&gt;
+		&lt;img src="v2_0/hero-banner/photo-2-sm.jpg" class="hero-image" alt=""&gt;
+	&lt;/picture&gt;
+
+	&lt;div class="hero-content"&gt;
+
+		&lt;div class="hero-content-position"&gt;
+
+			&lt;h2&gt;We have the right elements to help you succeed.&lt;/h2&gt;
+
+			&lt;p&gt;Join us and see how our great careers combine with your individual strengths to create an enviornment where you can succeed both at work and in life.&lt;/p&gt;
+
+		&lt;/div&gt;
+
+	&lt;/div&gt;
+
+	&lt;ul class="hero-elements"&gt;
+		&lt;li&gt;&lt;strong&gt;&lt;em data-element="Su"&gt;Support&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;&lt;em data-element="C"&gt;Collaboration&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;&lt;em data-element="Ce"&gt;Commitment&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;&lt;em data-element="E"&gt;Effort&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;strong&gt;&lt;em data-element="D"&gt;Dedication&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+	&lt;div class="hero-grid hero-col-1"&gt;&lt;/div&gt;
+	&lt;div class="hero-grid hero-col-2"&gt;&lt;/div&gt;
+	&lt;div class="hero-grid hero-col-3"&gt;&lt;/div&gt;
+	&lt;div class="hero-grid hero-col-4"&gt;&lt;/div&gt;
+	&lt;div class="hero-grid hero-col-5"&gt;&lt;/div&gt;
+	&lt;div class="hero-grid hero-col-6"&gt;&lt;/div&gt;
+	&lt;div class="hero-grid hero-col-7"&gt;&lt;/div&gt;
+	&lt;div class="hero-grid hero-col-8"&gt;&lt;/div&gt;
+	&lt;div class="hero-grid hero-col-9"&gt;&lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+
+	<h2>Images</h2>
+
+	<h3>Mobile Hero Image (842 x 643)</h3>
+
+	<a href="v2_0/hero-banner/photo-2-sm.jpg"><img src="v2_0/hero-banner/photo-2-sm.jpg" alt="Mobile Here Image 1"></a>
+
+	<h3>Mobile Hero Grid (842 x 643)</h3>
+
+	<a href="v2_0/hero-banner/grid-sm.png" class="media-container"><img src="v2_0/hero-banner/grid-sm.png" alt="Mobile Hero Grid"></a>
+
+	<h3>Desktop Hero Image (1374 x 643)</h3>
+
+	<a href="v2_0/hero-banner/photo-2-lg.jpg"><img src="v2_0/hero-banner/photo-2-lg.jpg" alt="Desktop Hero Image"></a>
+
+	<h3>Desktop Hero Grid (1374 x 643)</h3>
+
+	<a href="v2_0/hero-banner/grid-lg.png" class="media-container"><img src="v2_0/hero-banner/grid-lg.png" alt="Desktop Hero Grid"></a>
+
+	<h2>CSS (Sass)</h2>
+
+	<p>CSS is used to handle all aspects of the animation. Older browsers will simply fallback to a static version. This is perfectly normal and the way we design and develop for the modern web.</p>
+
+	<ul>
+		<li><a href="sass/nestle.scss">nestle.sass</a></li>
+		<li><a href="sass/tmp.scss">tmp.sass (Not required)</a></li>
+	</ul>
+
+	<h2>Layers</h2>
+
+	<p>A 3D rendering of the module. Helpful in understanding positioning and placement of the CSS z-index layers.</p>
+
+	<a href="img/3d-layers.png"><img src="img/3d-layers.png" alt="3D Model of the animation module"></a>
+
+	<h2>Performance</h2>
+
+	<p>Performance of your website is very important to TMP. We take pride in optimizing your experience so that all user can enjoy it. The total size of this module is <b>~183KB</b>. Great care has also been taken to produce well-balanced web animation, so as to not have it hinder the overall experience.</p>
+
+	<h2>Photoshop Assets</h2>
+
+	<ul>
+		<li><a href="assets/Nestle Animated Hero Banner - Mobile (v1).psd">Mobile (4.3MB)</a></li>
+		<li><a href="assets/Nestle Animated Hero Banner - Desktop (v1).psd">Desktop (10.8MB)</a></li>
+	</ul>
+
+	<h2>Dependencies</h2>
+
+	<p><a href="https://scottjehl.github.io/picturefill/">Picturefill 3.0.2</a> is required to support the new HTML5 <code>picture</code> element in non-supporting browsers, like Internet Explorer 11.</p>
+
+	<p>A custom version of <a href="https://modernizr.com/download?cssanimations-setclasses&q=css">Modernizr</a> is required to support animation in older browsers. CSS animation only runs when the "cssanimations" class is present in the opening <code>html</code> element.</p>
+
+	<h2>Browser Support</h2>
+
+	<p>Please see <a href="https://www.tmp.com/support/">TMP Worldwide's Operating System and Browser support</a> listing. TMP also attempts to support as much of WCAG 2.0 Level AA as is possible on every project.</p>
+
+	<h2>Versions</h2>
+
+	<ul>
+		<li><a href="http://creative.tmp.com/ftp_creative/Peter%20Testing/103563%20-%20Nestle_HTML5_Video/index.html">1.0 (HTML5 Video)</a></li>
+	</ul>
+
+	<h2>Credits</h2>
+
+	<ul>
+		<li>Animation: <a href="mailto:michael.spellacy@tmp.com">Michael "Spell" Spellacy</a></li>
+		<li>Design: <a href="mailto:ted.kirshner@tmp.com">Ted Kirshner</a></li>
+		<li>Management: <a href="mailto:amanda.beach@tmp.com">Amanda Beach</a></li>
+	</ul>
+
+	<hr/>
+
+	<img src="https://tbcdn.talentbrew.com/company/3401/v1_0/img/global/tmp-logo-drk.svg" alt="TMP Worldwide">
+
+	<p>&copy; 2017 TMP Worldwide. An equal opportunity employer.</p>
+
+</body>
+</html>
